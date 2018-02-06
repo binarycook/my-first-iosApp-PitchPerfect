@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="us1-au-ZrC">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,116 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ1-PI-Ei9">
+                                <rect key="frame" x="110" y="355.66666666666669" width="155" height="155"/>
+                                <state key="normal" image="RecordButton">
+                                    <color key="titleColor" red="0.023222437128424644" green="0.035419333726167679" blue="0.031341232359409332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmd-o0-L7z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-h0-250">
+                                <rect key="frame" x="136" y="518.66666666666663" width="102" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXo-xK-LVH">
+                                <rect key="frame" x="155" y="574.66666666666663" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="372-MN-AhG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="BL6-x2-KaD"/>
+                                    <constraint firstAttribute="width" constant="64" id="J9W-fj-6cQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="155" id="JjQ-vZ-K59"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="pDe-PG-GXh"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="155" id="vzn-SJ-JSs"/>
+                                </constraints>
+                                <state key="normal" image="Stop">
+                                    <color key="titleColor" red="0.030650410801172256" green="0.059355773031711578" blue="0.030472278594970703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rt6-LI-Bhs"/>
+                                    <segue destination="ajV-aC-E0g" kind="show" id="abv-4j-3NC"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="of2-fz-Zac">
+                                <rect key="frame" x="163" y="391" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="ZzA-uQ-7s7"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96002119779586792" green="0.98890596628189087" blue="0.95984715223312378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.96000903844833374" green="0.98883563280105591" blue="0.96393388509750366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iZ1-PI-Ei9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GRb-Zr-LcG"/>
+                            <constraint firstItem="Wup-h0-250" firstAttribute="top" secondItem="iZ1-PI-Ei9" secondAttribute="bottom" constant="8" symbolic="YES" id="ROR-kb-0eN"/>
+                            <constraint firstItem="Wup-h0-250" firstAttribute="centerX" secondItem="iZ1-PI-Ei9" secondAttribute="centerX" id="V5P-EP-kq1"/>
+                            <constraint firstItem="iZ1-PI-Ei9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vbz-Ry-7Ua"/>
+                            <constraint firstItem="WXo-xK-LVH" firstAttribute="centerX" secondItem="Wup-h0-250" secondAttribute="centerX" id="amI-NM-lfd"/>
+                            <constraint firstItem="WXo-xK-LVH" firstAttribute="top" secondItem="Wup-h0-250" secondAttribute="bottom" constant="36" id="ipa-TH-dN2"/>
+                            <constraint firstItem="iZ1-PI-Ei9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="onE-LB-nqs"/>
+                            <constraint firstItem="iZ1-PI-Ei9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v1d-2c-QTX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="of2-fz-Zac"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="n4G-2p-OJ4"/>
+                    <connections>
+                        <outlet property="recordingButton" destination="iZ1-PI-Ei9" id="DUd-aI-7Cx"/>
+                        <outlet property="recordingLabal" destination="Wup-h0-250" id="6Mq-dc-mGy"/>
+                        <outlet property="stopRecordingButton" destination="WXo-xK-LVH" id="G0k-Rs-2TR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="730" y="112"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lUt-6S-Ky8">
+            <objects>
+                <viewController id="ajV-aC-E0g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WYn-ND-01N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.55122411251068115" green="0.91484922170639038" blue="0.91673809289932251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0NM-Qd-WRA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRq-rK-UNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="118"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jFR-HU-QIb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="us1-au-ZrC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E4D-Hz-8eF">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rHS-es-TvP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkQ-ct-AaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="112"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RecordButton" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>
