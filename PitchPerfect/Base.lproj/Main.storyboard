@@ -48,7 +48,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rt6-LI-Bhs"/>
-                                    <segue destination="ajV-aC-E0g" kind="show" id="abv-4j-3NC"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="of2-fz-Zac">
@@ -81,6 +80,7 @@
                         <outlet property="recordingButton" destination="iZ1-PI-Ei9" id="DUd-aI-7Cx"/>
                         <outlet property="recordingLabal" destination="Wup-h0-250" id="6Mq-dc-mGy"/>
                         <outlet property="stopRecordingButton" destination="WXo-xK-LVH" id="G0k-Rs-2TR"/>
+                        <segue destination="ajV-aC-E0g" kind="show" identifier="stopRecording" id="BfI-Zd-jQp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
